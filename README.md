@@ -5,3 +5,4 @@ From [tmroyal/svgintpiano: An interactive svg piano written in pure javascript w
 ### References
 - https://github.com/felixroos/svg-piano
 - https://github.com/jesperdj/pianokeys-demo
+- [Building a piano with tone.js! - DEV Community](https://dev.to/shimphillip/building-a-piano-with-tone-js-5c2f)
