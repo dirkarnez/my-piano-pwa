@@ -1,5 +1,5 @@
-my-piano-pwa
-============
+[my-piano-pwa](https://dirkarnez.github.io/my-piano-pwa/)
+=========================================================
 From [tmroyal/svgintpiano: An interactive svg piano written in pure javascript with no dependencies](https://github.com/tmroyal/svgintpiano)
 
 ### References
