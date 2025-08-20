@@ -5,6 +5,9 @@ From [tmroyal/svgintpiano: An interactive svg piano written in pure javascript w
 ### PWA
 - [Image Generator / PWABuilder](https://www.pwabuilder.com/imageGenerator)
 
+### MIDI
+- [Web MIDI API](https://developer.mozilla.org/en-US/docs/Web/API/Web_MIDI_API)
+
 ### References
 - https://github.com/felixroos/svg-piano
 - https://github.com/jesperdj/pianokeys-demo
