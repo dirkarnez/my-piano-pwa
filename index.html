@@ -93,11 +93,49 @@ piano.subscribe("keyon", (mn)=>{
   oscs[mn].type = 'sine';
   oscs[mn].frequency.value = midicps(mn);
   oscs[mn].start();
+  sendNoteOn();
 });
 
 piano.subscribe("keyoff", (mn)=>{
   oscs[mn].stop();
-})
+  sendNoteOff();
+});
+
+
+    let midiAccess = null;
+let output = null;
+
+async function init() {
+    try {
+        midiAccess = await navigator.requestMIDIAccess();
+        const outputs = midiAccess.outputs.values();
+        output = outputs.next().value; // Get the first MIDI output
+    } catch (e) {
+        console.error('MIDI initialization failed', e);
+    }
+}
+
+function sendNoteOn() {
+    if (output) {
+        const note = 60; // Middle C
+        const velocity = 127; // Max velocity
+        output.send([0x90, note, velocity]); // Note On
+        console.log('Note On sent');
+    }
+}
+
+function sendNoteOff() {
+    if (output) {
+        const note = 60; // Middle C
+        output.send([0x80, note, 0]); // Note Off
+        console.log('Note Off sent');
+    }
+}
+
+// document.getElementById('noteOn').addEventListener('click', sendNoteOn);
+// document.getElementById('noteOff').addEventListener('click', sendNoteOff);
+
+init();
   
   </script>
 
